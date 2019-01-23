@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<script src="./gif.min.js"></script>
+<script src="./gifshot.js"></script>
+<script src="./fabric.min.js"></script>
+
+<body>
+  <input type="file" id="import-gif" />
+  <div class="show">上传</div>
+  <div class="isDownload">
+    <input type="checkbox" onclick="inputClikc()">
+    <span>是否下载</span>
+  </div>
+  
+  <div class="c-success" style="display: none;"><div id="progressWrapper" class="text-c"><span id="progressText"></span></div></div>
+  <div style="display: none;"><canvas id="merge" style="visibility: hidden"></canvas></div>    
+  <div>
+    <ul id="imgUL">
+    </ul>
+  </div>
+</body>
+<script src="./main.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+    document.getElementById('import-gif').addEventListener("change", readFile);
+  }
+  function inputClikc() {
+    modifyDownLoad()
+  }
+</script>
+</html>
